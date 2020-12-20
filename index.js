@@ -143,11 +143,11 @@ fs.existsSync('./session.json') && client.loadAuthInfo('./session.json')
 
 client.connect();
 
-// client.on('user-presence-update', json => console.log(json.id + ' presence is => ' + json.type)) || console.log(`${time}: Bot by ig:@_sadboy.ig`)
+// client.on('user-presence-update', json => console.log(json.id + ' presence is => ' + json.type)) || console.log(`${time}: Bot by RibasYT`)
 
 client.on('message-status-update', json => {
    const participant = json.participant ? ' (' + json.participant + ')' : ''
-   console.log(`[ ${time} ] => bot by ig:@_sadboy.ig`)
+   console.log(`[ ${time} ] => bot by RibasYT`)
 })
 
 client.on('message-new', async (m) => {
@@ -169,13 +169,13 @@ client.on('message-new', async (m) => {
 	
    switch (prefix) {
        case 'help':
-           client.sendMessage(id, help.help(id, A187, tanggal, whatsapp, youtube, instagram, nomer),MessageType.text)
+           client.sendMessage(id, help.help(id, RBSBOT, tanggal, whatsapp, youtube, instagram, nomer),MessageType.text)
            break      
       case 'donate':
-           client.sendMessage(id, donate.donate(id, A187, tanggal),MessageType.text)
+           client.sendMessage(id, donate.donate(id, RBSBOT, tanggal),MessageType.text)
            break          
       case 'info':
-           client.sendMessage(id, info.info(id, A187, tanggal),MessageType.text)
+           client.sendMessage(id, info.info(id, RBSBOT, tanggal),MessageType.text)
            break             
        case 'nulis':
            nulis(value)
